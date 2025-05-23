@@ -9,5 +9,6 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  }
+  },
+  base: 'https://vuthienloc.github.io/Demo_FE/',
 })
