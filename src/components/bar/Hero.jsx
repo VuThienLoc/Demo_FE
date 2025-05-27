@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="relative min-h-[70vh] flex flex-col items-center justify-center bg-blue-50 bg-[url('./assets/logo.svg')] bg-cover bg-center pb-4 text-center px-4">
+    <div className="relative min-h-[70vh] flex flex-col items-center justify-center bg-blue-50 bg-[url('https://images.unsplash.com/photo-1747619715083-3db63905a75a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center pb-4 text-center px-4">
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
         Empowering Gender Education
       </h1>

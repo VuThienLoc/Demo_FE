@@ -10,5 +10,5 @@ export default defineConfig({
       '@': '/src'
     }
   },
-  base: 'https://vuthienloc.github.io/Demo_FE/',
+  base: "./"
 })

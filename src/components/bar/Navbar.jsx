@@ -9,15 +9,8 @@ const { Title } = Typography;
 
 const navigation = [
   { name: "Products", href: "/products" },
-  {
-    name: "Features",
-    href: "/features",
-    dropdown: [
-      { name: "Cycle Tracking", href: "/features/cycle-tracking" },
-      { name: "Anonymous Mode", href: "/features/anonymous-mode" },
-      { name: "Health Insights", href: "/features/health-insights" },
-    ],
-  },
+  { name: "Consultant", href: "/consultant" },
+  { name: "Blog", href: "/blog" },
   { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
 ];
@@ -26,7 +19,6 @@ const navigation = [
 const languages = [
   { key: "en", label: "English" },
   { key: "vi", label: "Tiếng Việt" },
-  { key: "es", label: "Español" },
 ];
 
 // Build dropdown menu for mobile

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Pagination, Select } from "antd";
+import { Pagination, Select, Breadcrumb } from "antd";
 import { Link } from "react-router-dom";
 import ProductCard from "@/components/products/ProductCard";
 
@@ -21,6 +21,7 @@ const ProductsPage = () => {
     )
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.products);
         setProducts(data.products);
         setTotalProducts(data.total);
         setLoading(false);
@@ -62,6 +63,22 @@ const ProductsPage = () => {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb
+          style={{ marginBottom: "16px" }}
+          separator=">"
+          items={[
+            {
+              title: "Home",
+              href: "/",
+            },
+            {
+              title: "Products",
+              href: "/products",
+            },
+          ]}
+        />
+
         {/* Filtering */}
         <div className="mb-8">
           <Select
@@ -82,7 +99,7 @@ const ProductsPage = () => {
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} products={product} />
               ))}
             </div>
 

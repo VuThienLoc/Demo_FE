@@ -17,11 +17,6 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 relative">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/60 to-cyan-500/60"></div>
-      </div>
-
       {/* Register Card */}
       <Card
         className="w-full max-w-md relative z-10"
