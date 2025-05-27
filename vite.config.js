@@ -10,5 +10,6 @@ export default defineConfig({
       '@': '/src'
     }
   },
-  base: "./"
+  base: "/Summer2025SWP391_SE1832_Group6_FE"
 })
+

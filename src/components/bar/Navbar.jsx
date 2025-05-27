@@ -11,8 +11,6 @@ const navigation = [
   { name: "Products", href: "/products" },
   { name: "Consultant", href: "/consultant" },
   { name: "Blog", href: "/blog" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
 ];
 
 // Language options

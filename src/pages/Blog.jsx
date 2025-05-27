@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Breadcrumb } from "antd";
+import { Card, Typography } from "antd";
+
+const { Title, Paragraph } = Typography;
 
 // Sample blog post data
 const blogPosts = [
@@ -102,36 +104,23 @@ export default function BlogPage() {
   });
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8 md:py-12">
+    <div className="bg-gray-50 min-h-screen py-6">
       {/* Header Section */}
-      <div className="bg-white pt-16 pb-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Blog Posts
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover expert insights and resources to empower you with knowledge
-            for a healthy, safe, and respectful life.
-          </p>
-        </div>
-      </div>
+      <Card
+        style={{ maxWidth: "100%", margin: "0 auto 48px", textAlign: "center" }}
+        variant={false}
+      >
+        <Title level={1} style={{ color: "#1677ff" }}>
+          Welcome to Our Blog
+        </Title>
+        <Paragraph type="secondary" style={{ fontSize: 18 }}>
+          Explore expert insights, tips, and resources to help you navigate your
+          journey toward health, wellness, and personal growth. Stay informed
+          and inspired with our curated articles.
+        </Paragraph>
+      </Card>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        {/* Breadcrumbs */}
-        <Breadcrumb
-          separator=">"
-          items={[
-            {
-              title: "Home",
-              href: "/",
-            },
-            {
-              title: "Blog",
-              href: "/blog",
-            },
-          ]}
-        />
-
         {/* Main Content with Sidebar */}
         <div className="flex flex-col md:flex-row-reverse gap-8">
           {/* Sidebar */}

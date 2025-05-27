@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Pagination, Select, Breadcrumb } from "antd";
+import { Pagination, Select, Typography, Card } from "antd";
 import { Link } from "react-router-dom";
 import ProductCard from "@/components/products/ProductCard";
+
+const { Title, Paragraph } = Typography;
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -47,37 +49,24 @@ const ProductsPage = () => {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen py-6">
       {/* Header Section */}
-      <div className="bg-white pt-16 pb-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Products
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our collection of health testing kits designed to help you
-            take control of your health journey.
-          </p>
-        </div>
-      </div>
+      <Card
+        style={{ maxWidth: screen, margin: "0 auto 48px", textAlign: "center" }}
+        variant={false}
+      >
+        <Title level={1} style={{ color: "#1677ff" }}>
+          Explore Our Products
+        </Title>
+        <Paragraph type="secondary" style={{ fontSize: 18 }}>
+          Discover a curated selection of products designed to support your
+          health and wellness journey. From supplements to specialized tools,
+          find everything you need to live your best life.
+        </Paragraph>
+      </Card>
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb Navigation */}
-        <Breadcrumb
-          style={{ marginBottom: "16px" }}
-          separator=">"
-          items={[
-            {
-              title: "Home",
-              href: "/",
-            },
-            {
-              title: "Products",
-              href: "/products",
-            },
-          ]}
-        />
 
         {/* Filtering */}
         <div className="mb-8">
